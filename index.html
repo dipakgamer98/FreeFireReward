@@ -5,122 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garena Free Fire Team</title>
     <style>
-        body { 
-            background-color: #252525; 
-            color: white; 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
+        body {
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .header { 
-            background-color: #63d6ff; 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 28px; 
-            font-weight: bold; 
+        .header {
+            background-color: #4fe3ff;
+            width: 100%;
+            text-align: center;
+            padding: 18px;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
         }
-        .container { 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 30px; 
-            align-items: center; 
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
         }
-        .video-section { 
-            width: 100%; 
-            max-width: 450px; 
-            border-radius: 15px; 
-            overflow: hidden; 
+        .video-section {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
             background-color: #000;
         }
-        video { 
-            width: 100%; 
-            display: block; 
-        }
-        /* Neon Rainbow Border Effect */
-        .neon-border-wrapper {
-            background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, purple, red);
-            padding: 3px;
-            border-radius: 18px;
+        .video-section video {
             width: 100%;
-            max-width: 450px;
+            height: auto;
+            display: block;
         }
-        .offer-card { 
-            background-color: #1a1a1a; 
-            padding: 20px; 
-            border-radius: 15px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 20px; 
+        .neon-border-wrapper {
+            padding: 3px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            width: 100%;
         }
-        .offer-top { 
-            display: flex; 
-            gap: 15px; 
-            align-items: center; 
+        .offer-card {
+            background-color: #1a1a1a;
+            border-radius: 18px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
-        .app-icon { 
-            width: 80px; 
-            height: 80px; 
-            border-radius: 15px; 
+        .offer-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .offer-content img {
+            width: 75px;
+            height: 75px;
+            border-radius: 12px;
             object-fit: cover;
         }
-        .offer-text h2 { 
-            margin: 0; 
-            font-size: 22px; 
+        .offer-text h2 {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+            color: white;
         }
-        .offer-text p { 
-            margin: 5px 0 0; 
-            color: #ccc; 
-            font-size: 14px; 
-            text-transform: uppercase;
+        .offer-text p {
+            font-size: 13px;
+            margin: 0;
+            color: #ccc;
         }
-        .stars { 
-            color: #ffd700; 
-            font-size: 22px; 
-            margin-top: 5px;
+        .stars {
+            color: #ffd700;
+            font-size: 20px;
+            margin-bottom: 15px;
         }
-        .install-btn { 
-            background-color: #00e676; 
-            color: white; 
-            text-align: center; 
-            padding: 15px; 
-            border-radius: 30px; 
-            text-decoration: none; 
-            font-size: 20px; 
-            font-weight: bold; 
-            display: block; 
+        .install-btn {
+            background-color: #00e676;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            width: 100%;
+            box-shadow: 0px 4px 10px rgba(0, 230, 118, 0.4);
         }
     </style>
 </head>
 <body>
 
-<div class="header">Garena Free Fire Team</div>
+    <div class="header">Garena Free Fire Team</div>
 
-<div class="container">
-    <!-- Video Player -->
-    <div class="video-section">
-        <video controls poster="your-thumbnail-image.jpg">
-            <!-- Yahan apni video ka link daalein -->
-            <source src="your-gameplay-video.mp4" type="video/mp4">
-        </video>
-    </div>
+    <div class="container">
+        <!-- Direct Video Player -->
+        <div class="video-section">
+            <video controls autoplay muted>
+                <source src="video-1787804775854.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-    <!-- App Install Box -->
-    <div class="neon-border-wrapper">
-        <div class="offer-card">
-            <div class="offer-top">
-                <!-- Yahan diamond icon image ka link daalein -->
-                <img src="diamond-icon.jpg" alt="Free Fire Diamonds" class="app-icon">
-                <div class="offer-text">
-                    <h2>Free Unlimited Daimonds</h2>
-                    <p>CLAIM FREE Daimonds</p>
-                    <div class="stars">★★★★★</div>
+        <!-- Neon Offer Card with Image -->
+        <div class="neon-border-wrapper">
+            <div class="offer-card">
+                <div class="offer-content">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=200" alt="Diamond Box">
+                    <div class="offer-text">
+                        <h2>Free Unlimited Daimonds</h2>
+                        <p>CLAIM FREE Daimonds</p>
+                    </div>
                 </div>
+                <div class="stars">★★★★★</div>
+                <a href="YAHAN_APNA_NAYA_LINK_DAALEIN" class="install-btn">Install</a>
             </div>
-            <!-- Yahan # ki jagah apna target link daalein -->
-            <a href="#" class="install-btn">Install</a>
         </div>
     </div>
-</div>
 
 </body>
 </html>

@@ -109,7 +109,7 @@
     <div class="container">
         <!-- Direct Video Player -->
         <div class="video-section">
-            <video id="myVideo" controls autoplay muted playsinline>
+            <video id="myVideo" autoplay muted loop playsinline>
                 <source src="video-1787804775854.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -132,10 +132,12 @@
     </div>
 
     <script>
-        document.addEventListener('click', function() {
+        // Jaise hi user screen par kahin bhi pehli baar tap/click karega, aawaz on ho jayegi
+        window.addEventListener('click', function() {
             var v = document.getElementById('myVideo');
-            if (v && v.muted) {
+            if (v) {
                 v.muted = false;
+                v.play();
             }
         }, { once: true });
     </script>

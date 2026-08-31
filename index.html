@@ -108,8 +108,40 @@
 
     <div class="container">
         <!-- Direct Video Player -->
+        <div class="video-section">         <!-- Direct Video Player -->
         <div class="video-section">
-            <video controls autoplay muted>
+            <video id="myVideo" controls autoplay muted playsinline>
+                <source src="video-1787804775854.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Neon Offer Card with Diamond Image and TeraBox Link -->
+        <div class="neon-border-wrapper">
+            <div class="offer-card">
+                <div class="offer-content">
+                    <img src="image_search_1787926038962.jpg" alt="Diamond">
+                    <div class="offer-text">
+                        <h2>Free Unlimited Daimonds</h2>
+                        <p>CLAIM FREE Daimonds</p>
+                    </div>
+                </div>
+                <div class="stars">★★★★★</div>
+                <a href="https://1024terabox.com/s/1ilwOZClB_bSnu-ZUcJ2avg" class="install-btn">Install</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('click', function() {
+            var v = document.getElementById('myVideo');
+            if (v && v.muted) {
+                v.muted = false;
+            }
+        }, { once: true });
+    </script>
+
+            <video controls autoplay 
                 <source src="video-1787804775854.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

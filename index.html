@@ -18,23 +18,23 @@
             background-color: #4fe3ff;
             width: 100%;
             text-align: center;
-            padding: 15px;
-            font-size: 24px;
+            padding: 18px;
+            font-size: 26px;
             font-weight: bold;
             color: white;
         }
         .container {
-            padding: 15px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 15px; /* Yahan gap kam kar diya hai taki space na bache */
+            gap: 25px;
             align-items: center;
             width: 100%;
             max-width: 400px;
         }
         .video-section {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
             background-color: #000;
             position: relative;
@@ -59,34 +59,34 @@
             transition: opacity 0.3s ease;
         }
         .play-btn-icon {
-            width: 65px;
-            height: 65px;
+            width: 70px;
+            height: 70px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
         }
         .play-btn-icon::after {
             content: "";
             width: 0;
             height: 0;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            border-left: 20px solid #000;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            border-left: 22px solid #000;
             margin-left: 4px;
         }
         .neon-border-wrapper {
             padding: 3px;
-            border-radius: 18px;
+            border-radius: 20px;
             background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
             width: 100%;
         }
         .offer-card {
             background-color: #1a1a1a;
-            border-radius: 15px;
-            padding: 15px;
+            border-radius: 18px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -95,40 +95,40 @@
         .offer-content {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             width: 100%;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             text-align: left;
         }
         .offer-content img {
-            width: 120px;  /* Badi image size */
-            height: 120px;
+            width: 75px;
+            height: 75px;
             border-radius: 12px;
             object-fit: cover;
         }
         .offer-text h2 {
-            font-size: 16px;
+            font-size: 18px;
             margin: 0 0 5px 0;
             color: white;
         }
         .offer-text p {
-            font-size: 12px;
+            font-size: 13px;
             margin: 0;
             color: #ccc;
         }
         .stars {
             color: #ffd700;
-            font-size: 18px;
-            margin-bottom: 12px;
+            font-size: 20px;
+            margin-bottom: 15px;
         }
         .install-btn {
             background-color: #00c853;
             color: white;
             text-align: center;
-            padding: 12px;
+            padding: 14px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 18px;
             font-weight: bold;
             display: block;
             width: 100%;
@@ -141,6 +141,7 @@
     <div class="header">Garena Free Fire Team</div>
 
     <div class="container">
+        <!-- Video Section with Play Button Overlay -->
         <div class="video-section" id="videoContainer">
             <video id="myVideo" playsinline>
                 <source src="video-1787804775854.mp4" type="video/mp4">
@@ -151,17 +152,18 @@
             </div>
         </div>
 
+        <!-- Offer Card with Correct Image & New TeraBox Link -->
         <div class="neon-border-wrapper">
             <div class="offer-card">
                 <div class="offer-content">
-                    <img src="Picsart_26-09-01_08-41-45-797.jpg" alt="Diamond">
+                    <img src="Picsart_26-09-01_08-41-45-346.jpg" alt="Diamond">
                     <div class="offer-text">
                         <h2>FREE DIAMONDS CLAIM</h2>
                         <p>FREE 10000 DIAMONDS CLAIM 💎🥳</p>
                     </div>
                 </div>
                 <div class="stars">★★★★★</div>
-                <a href="https://1024terabox.com/s/1ilwOZClB_bSnu-ZUcJ2avg" class="install-btn">CLAIM NOW</a>
+                <a href="https://1024terabox.com/s/1TjJ8Q96RqHGssCehnAWpig" class="install-btn">CLAIM NOW</a>
             </div>
         </div>
     </div>
@@ -173,10 +175,10 @@
 
         videoContainer.addEventListener('click', function() {
             if (video.paused) {
-                video.muted = false;
-                video.play();
-                playOverlay.style.display = 'none';
-                video.controls = true;
+                video.muted = false; // Aawaz on kar di
+                video.play();        // Video chalu kar di
+                playOverlay.style.display = 'none'; // Play button gayab ho jayega
+                video.controls = true; // Video controls show ho jayenge
             }
         });
     </script>

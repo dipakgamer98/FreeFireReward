@@ -18,23 +18,23 @@
             background-color: #4fe3ff;
             width: 100%;
             text-align: center;
-            padding: 18px;
-            font-size: 26px;
+            padding: 15px;
+            font-size: 24px;
             font-weight: bold;
             color: white;
         }
         .container {
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 15px; /* Yahan gap kam kar diya hai taki space na bache */
             align-items: center;
             width: 100%;
             max-width: 400px;
         }
         .video-section {
             width: 100%;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             background-color: #000;
             position: relative;
@@ -59,34 +59,34 @@
             transition: opacity 0.3s ease;
         }
         .play-btn-icon {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
         }
         .play-btn-icon::after {
             content: "";
             width: 0;
             height: 0;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            border-left: 22px solid #000;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid #000;
             margin-left: 4px;
         }
         .neon-border-wrapper {
             padding: 3px;
-            border-radius: 20px;
+            border-radius: 18px;
             background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
             width: 100%;
         }
         .offer-card {
             background-color: #1a1a1a;
-            border-radius: 18px;
-            padding: 20px;
+            border-radius: 15px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -95,24 +95,19 @@
         .offer-content {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             text-align: left;
         }
-    
-           .offer-content img {
-    width: 130px;
-    height: 130px;
-    border-radius: 15px;
-    object-fit: cover;
-            }
-            
-    
-
+        .offer-content img {
+            width: 120px;  /* Badi image size */
+            height: 120px;
+            border-radius: 12px;
+            object-fit: cover;
         }
         .offer-text h2 {
-            font-size: 17px;
+            font-size: 16px;
             margin: 0 0 5px 0;
             color: white;
         }
@@ -123,17 +118,17 @@
         }
         .stars {
             color: #ffd700;
-            font-size: 20px;
-            margin-bottom: 15px;
+            font-size: 18px;
+            margin-bottom: 12px;
         }
         .install-btn {
             background-color: #00c853;
             color: white;
             text-align: center;
-            padding: 14px;
+            padding: 12px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             display: block;
             width: 100%;
@@ -178,10 +173,10 @@
 
         videoContainer.addEventListener('click', function() {
             if (video.paused) {
-                video.muted = false; // Aawaz on kar di
-                video.play();        // Video chalu kar di
-                playOverlay.style.display = 'none'; // Play button gayab ho jayega
-                video.controls = true; // Video controls show ho jayenge
+                video.muted = false;
+                video.play();
+                playOverlay.style.display = 'none';
+                video.controls = true;
             }
         });
     </script>

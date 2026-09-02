@@ -3,203 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garena Free Fire Team - Rewards</title>
+    <title>Garena Free Fire Team</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
             background-color: #121212;
-            font-family: Arial, sans-serif;
             color: white;
-            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
         }
-        .header {
+        .top-bar {
             background-color: #00e5ff;
-            color: #121212;
-            padding: 15px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .container {
-            padding: 15px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .video-container {
-            position: relative;
+            color: #000;
             width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .banner-container {
+            width: 92%;
+            max-width: 400px;
+            background-color: #1a1a1a;
+            border: 2px solid #333;
             border-radius: 12px;
             overflow: hidden;
-            margin-bottom: 20px;
-            background: #000;
+            margin-bottom: 15px;
         }
-        .video-container video {
+        .banner-container img {
             width: 100%;
             display: block;
+            object-fit: cover;
         }
-        .play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0,0,0,0.3);
-            cursor: pointer;
-        }
-        .play-btn-icon {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        .play-btn-icon::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 0;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            border-left: 20px solid #121212;
-            margin-left: 4px;
-        }
-        .neon-border-wrapper {
-            padding: 3px;
-            border-radius: 16px;
-            background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
-            margin-bottom: 20px;
-        }
-        .offer-card {
-            background-color: #1a1a1a;
-            border-radius: 14px;
+        .reward-card {
+            background: linear-gradient(135deg, #1a1a1a, #262626);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff007f, #00ffff, #ffcc00) 1;
+            border-radius: 12px;
+            width: 92%;
+            max-width: 400px;
             padding: 12px;
             display: flex;
             align-items: center;
-            text-align: left;
+            gap: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
         }
-        .offer-card img {
-            width: 75px;
-            height: 75px;
-            border-radius: 10px;
+        .reward-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 8px;
             object-fit: cover;
-            margin-right: 12px;
-            flex-shrink: 0;
+            background-color: #000;
         }
-        .offer-info {
-            flex-grow: 1;
+        .reward-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
-        .badge-row {
+        .badges {
             display: flex;
             gap: 6px;
-            margin-bottom: 4px;
         }
         .badge-new {
-            background-color: #ff3366;
+            background-color: #ff0055;
             color: white;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: bold;
             padding: 2px 6px;
             border-radius: 4px;
         }
         .badge-premium {
-            background-color: #7b2cbf;
+            background-color: #7b1fa2;
             color: white;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: bold;
             padding: 2px 6px;
             border-radius: 4px;
         }
-        .offer-info h2 {
-            font-size: 16px;
-            margin: 0 0 2px 0;
-            color: white;
+        .reward-title {
+            font-size: 15px;
             font-weight: bold;
+            color: white;
+            margin: 0;
         }
-        .offer-info p {
-            font-size: 11px;
-            margin: 0 0 4px 0;
+        .reward-desc {
+            font-size: 10px;
             color: #aaa;
+            margin: 0;
+            line-height: 1.3;
         }
         .stars {
-            color: #ffd700;
+            color: #ffc107;
             font-size: 12px;
         }
-        .install-btn {
-            background-color: #00c853;
-            color: white;
+        .claim-btn {
+            background-color: #00e676;
+            color: #000;
             text-align: center;
             padding: 14px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             display: block;
-            width: 100%;
+            width: 92%;
+            max-width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 230, 118, 0.4);
             box-sizing: border-box;
-            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <div class="header">Garena Free Fire Team</div>
+    <div class="top-bar">Garena Free Fire Team</div>
 
-    <div class="container">
-        <!-- Video Section with Play Button Overlay -->
-        <div class="video-container" id="videoContainer">
-            <video id="myVideo" playsinline>
-                <source src="video-1787804775854.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-overlay" id="playOverlay">
-                <div class="play-btn-icon"></div>
-            </div>
-        </div>
-
-        <!-- Offer Card with Small Icon Layout -->
-        <div class="neon-border-wrapper">
-            <div class="offer-card">
-                <img src="image_search_1788236237970.jpg" alt="Free Fire Diamonds">
-                <div class="offer-info">
-                    <div class="badge-row">
-                        <span class="badge-new">NEW</span>
-                        <span class="badge-premium">PREMIUM</span>
-                    </div>
-                    <h2>FREE DIAMONDS</h2>
-                    <p>FREE FIRE UNLIMITED DIAMONDS • INSTANT CLAIM</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fixed / Action Button -->
-        <a href="https://1024terabox.com/s/1xx-pXgmEp-vZ8ANJhwVJQ" class="install-btn">💎 CLAIM FREE DIAMOND</a>
+    <div class="banner-container">
+        <img src="https://i.ibb.co/F4w6kS1D/Picsart-26-08-15-09.jpg" alt="Banner">
     </div>
 
-    <script>
-        const video = document.getElementById('myVideo');
-        const playOverlay = document.getElementById('playOverlay');
+    <div class="reward-card">
+        <img src="https://i.ibb.co/F4w6kS1D/Picsart-26-08-15-09.jpg" class="reward-img" alt="Diamonds">
+        <div class="reward-info">
+            <div class="badges">
+                <span class="badge-new">NEW</span>
+                <span class="badge-premium">PREMIUM</span>
+            </div>
+            <h3 class="reward-title">FREE DIAMONDS</h3>
+            <p class="reward-desc">FREE FIRE UNLIMITED DIAMONDS • INSTANT CLAIM</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
 
-        playOverlay.addEventListener('click', function() {
-            if (video.paused) {
-                video.play();
-                playOverlay.style.display = 'none';
-            } else {
-                video.pause();
-                playOverlay.style.display = 'flex';
-            }
-        });
-
-        video.addEventListener('ended', function() {
-            playOverlay.style.display = 'flex';
-        });
-    </script>
+    <a href="https://1024terabox.com/s/1Janb2wegqWRxGjfHGf0ruA" class="claim-btn">💎 CLAIM FREE DIAMOND</a>
 
 </body>
 </html>

@@ -6,181 +6,118 @@
     <title>Garena Free Fire Team</title>
     <style>
         body {
-            background-color: #222;
+            background-color: #121212;
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding-bottom: 30px;
         }
-        .header {
-            background-color: #4fe3ff;
+        .top-bar {
+            background-color: #00e5ff;
+            color: #000;
             width: 100%;
             text-align: center;
-            padding: 18px;
-            font-size: 26px;
+            padding: 12px 0;
+            font-size: 16px;
             font-weight: bold;
-            color: white;
+            margin-bottom: 15px;
         }
-        .container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            align-items: center;
-            width: 100%;
+        .video-container {
+            width: 92%;
             max-width: 400px;
-        }
-        .video-section {
-            width: 100%;
-            border-radius: 15px;
+            background-color: #1a1a1a;
+            border: 2px solid #333;
+            border-radius: 12px;
             overflow: hidden;
-            background-color: #000;
-            position: relative;
-            cursor: pointer;
+            margin-bottom: 15px;
         }
-        .video-section video {
+        .video-container video {
             width: 100%;
-            height: auto;
             display: block;
         }
-        /* Custom Play Overlay Button */
-        .play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
+        .reward-card {
+            background: linear-gradient(135deg, #1a1a1a, #262626);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ff007f, #00ffff, #ffcc00) 1;
+            border-radius: 12px;
+            width: 92%;
+            max-width: 400px;
+            padding: 12px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: opacity 0.3s ease;
+            gap: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
         }
-        .play-btn-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+        .reward-img {
+            width: 65px;
+            height: 65px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #000;
         }
-        .play-btn-icon::after {
-            content: "";
-            width: 0;
-            height: 0;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            border-left: 22px solid #000;
-            margin-left: 4px;
-        }
-        .neon-border-wrapper {
-            padding: 3px;
-            border-radius: 20px;
-            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-            width: 100%;
-        }
-        .offer-card {
-            background-color: #1a1a1a;
-            border-radius: 18px;
-            padding: 20px;
+        .reward-info {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
+            gap: 4px;
         }
-        .offer-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .offer-content img {
-            width: 110px;
-            height: 110px;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-        .offer-text h2 {
-            font-size: 17px;
-            margin: 0 0 5px 0;
+        .reward-title {
+            font-size: 15px;
+            font-weight: bold;
             color: white;
-        }
-        .offer-text p {
-            font-size: 12px;
             margin: 0;
-            color: #ccc;
+        }
+        .reward-desc {
+            font-size: 10px;
+            color: #aaa;
+            margin: 0;
+            line-height: 1.3;
         }
         .stars {
-            color: #ffd700;
-            font-size: 20px;
-            margin-bottom: 15px;
+            color: #ffc107;
+            font-size: 12px;
         }
-        .install-btn {
-            background-color: #00c853;
-            color: white;
+        .claim-btn {
+            background-color: #00e676;
+            color: #000;
             text-align: center;
             padding: 14px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
             display: block;
-            width: 100%;
-            box-shadow: 0px 4px 10px rgba(0, 200, 83, 0.4);
+            width: 92%;
+            max-width: 400px;
+            box-shadow: 0px 4px 15px rgba(0, 230, 118, 0.4);
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">Garena Free Fire Team</div>
+    <div class="top-bar">Garena Free Fire Team</div>
 
-    <div class="container">
-        <div class="video-section" id="videoContainer">
-            <video id="myVideo" playsinline>
-                <source src="video-1787804775854.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="play-overlay" id="playOverlay">
-                <div class="play-btn-icon"></div>
-            </div>
-        </div>
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-        <div class="neon-border-wrapper">
-            <div class="offer-card">
-                <div class="offer-content">
-                    <img src="Picsart_26-09-01_08-41-45-797.jpg" alt="Diamond">
-                    <div class="offer-text">
-                        <h2>FREE DIAMONDS CLAIM</h2>
-                        <p>FREE 10000 DIAMONDS CLAIM 💎🥳</p>
-                    </div>
-                </div>
-                <div class="stars">★★★★★</div>
-                <a href="https://1024terabox.com/s/1ilwOZClB_bSnu-ZUcJ2avg" class="install-btn">CLAIM NOW</a>
-            </div>
+    <div class="reward-card">
+        <img src="https://raw.githubusercontent.com/dipakgamer98/FreeFireReward/main/image_search_1788236237970.jpg" class="reward-img" alt="Diamond">
+        <div class="reward-info">
+            <h3 class="reward-title">FREE DIAMONDS CLAIM</h3>
+            <p class="reward-desc">FREE 10000 DIAMONDS CLAIM 💎🥳</p>
+            <div class="stars">★★★★★</div>
         </div>
     </div>
 
-    <script>
-        const videoContainer = document.getElementById('videoContainer');
-        const video = document.getElementById('myVideo');
-        const playOverlay = document.getElementById('playOverlay');
-
-        videoContainer.addEventListener('click', function() {
-            if (video.paused) {
-                video.muted = false; // Aawaz on kar di
-                video.play();        // Video chalu kar di
-                playOverlay.style.display = 'none'; // Play button gayab ho jayega
-                video.controls = true; // Video controls show ho jayenge
-            }
-        });
-    </script>
+    <a href="https://1024terabox.com/s/1Po9NS3IRCASNtAWaJ2lUTA" class="claim-btn">CLAIM NOW</a>
 
 </body>
 </html>
-

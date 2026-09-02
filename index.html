@@ -3,115 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garena Free Fire Team</title>
+    <title>Garena Free Fire Team - Rewards</title>
     <style>
         body {
-            background-color: #222;
-            color: white;
-            font-family: Arial, sans-serif;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 0;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
         }
         .header {
-            background-color: #4fe3ff;
-            width: 100%;
-            text-align: center;
-            padding: 18px;
-            font-size: 26px;
+            background-color: #00e5ff;
+            color: #121212;
+            padding: 15px;
+            font-size: 20px;
             font-weight: bold;
-            color: white;
         }
         .container {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            align-items: center;
-            width: 100%;
-            max-width: 400px;
+            padding: 15px;
+            max-width: 500px;
+            margin: 0 auto;
         }
-        .video-section {
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-            background-color: #000;
+        .video-container {
             position: relative;
-            cursor: pointer;
-        }
-        .video-section video {
             width: 100%;
-            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            background: #000;
+        }
+        .video-container video {
+            width: 100%;
             display: block;
         }
-        /* Custom Play Overlay Button */
         .play-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4);
             display: flex;
-            justify-content: center;
             align-items: center;
-            transition: opacity 0.3s ease;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
         }
         .play-btn-icon {
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 255, 255, 0.9);
+            width: 60px;
+            height: 60px;
+            background: white;
             border-radius: 50%;
             display: flex;
-            justify-content: center;
             align-items: center;
-            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.6);
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
         .play-btn-icon::after {
-            content: "";
+            content: '';
+            display: block;
             width: 0;
             height: 0;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
-            border-left: 22px solid #000;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid #121212;
             margin-left: 4px;
         }
         .neon-border-wrapper {
             padding: 3px;
-            border-radius: 20px;
-            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
-            width: 100%;
+            border-radius: 16px;
+            background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+            margin-bottom: 20px;
         }
         .offer-card {
             background-color: #1a1a1a;
-            border-radius: 18px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            border-radius: 14px;
+            overflow: hidden;
+            padding-bottom: 15px;
+        }
+        .offer-card img {
+            width: 100%;
+            display: block;
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
         }
         .offer-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            margin-bottom: 15px;
-            text-align: left;
+            padding: 10px;
         }
-        .offer-content img {
-            width: 75px;
-            height: 75px;
-            border-radius: 12px;
-            object-fit: cover;
-        }
-        .offer-text h2 {
+        .offer-content h2 {
             font-size: 18px;
             margin: 0 0 5px 0;
             color: white;
         }
-        .offer-text p {
+        .offer-content p {
             font-size: 13px;
             margin: 0;
             color: #ccc;
@@ -132,7 +116,8 @@
             font-weight: bold;
             display: block;
             width: 100%;
-            box-shadow: 0px 4px 10px rgba(0, 200, 83, 0.4);
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 200, 83, 0.4);
         }
     </style>
 </head>
@@ -141,8 +126,7 @@
     <div class="header">Garena Free Fire Team</div>
 
     <div class="container">
-        <!-- Video Section with Play Button Overlay -->
-        <div class="video-section" id="videoContainer">
+        <div class="video-container" id="videoContainer">
             <video id="myVideo" playsinline>
                 <source src="video-1787804775854.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -152,38 +136,39 @@
             </div>
         </div>
 
-        <!-- Offer Card with Correct Image & New TeraBox Link -->
         <div class="neon-border-wrapper">
             <div class="offer-card">
+                <img src="image_search_1788236237970.jpg" alt="Free Fire Diamonds">
                 <div class="offer-content">
-                    <image_search_1788236237970.jpg
-                    <div class="offer-text">
-                        <h2>FREE DIAMONDS CLAIM</h2>
-                        <p>FREE 10000 DIAMONDS CLAIM 💎🥳</p>
-                    </div>
+                    <h2>FREE DIAMONDS CLAIM</h2>
+                    <p>FREE 10000 DIAMONDS CLAIM 💎🥳</p>
                 </div>
-                <div class="stars">★★★★★</div>
-                
-                <!-- Your Fixed Button -->
-                <a href="https://1024terabox.com/s/1xx-pwgmEp-vZA8AMJhwVJQ" class="install-btn">CLAIM 1000 DAIMOND 💎</a>
-                
             </div>
         </div>
+
+        <div class="stars">★★★★★</div>
+
+        <a href="https://1024terabox.com/s/1xx-pXgmEp-vZ8ANJhwVJQ" class="install-btn">CLAIM 1000 DIAMOND 💎</a>
     </div>
 
     <script>
-        const videoContainer = document.getElementById('videoContainer');
         const video = document.getElementById('myVideo');
         const playOverlay = document.getElementById('playOverlay');
 
-        videoContainer.addEventListener('click', function() {
+        playOverlay.addEventListener('click', function() {
             if (video.paused) {
-                video.muted = false; // Awaz on kar di
-                video.play();       // Video chalu kar di
-                playOverlay.style.display = 'none'; // Play button gayab ho jayega
-                video.controls = true; // Video controls show ho jayenge
+                video.play();
+                playOverlay.style.display = 'none';
+            } else {
+                video.pause();
+                playOverlay.style.display = 'flex';
             }
         });
+
+        video.addEventListener('ended', function() {
+            playOverlay.style.display = 'flex';
+        });
     </script>
+
 </body>
 </html>

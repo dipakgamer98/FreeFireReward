@@ -55,13 +55,12 @@
             transform: translate(-50%, -50%);
             width: 75px;
             height: 75px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border: 3px solid white;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
             pointer-events: none;
         }
         .custom-play-btn::after {
@@ -70,9 +69,9 @@
             left: 3px;
             width: 0;
             height: 0;
-            border-top: 18px solid transparent;
-            border-bottom: 18px solid transparent;
-            border-left: 28px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 24px solid #121212;
         }
         .reward-card {
             background: linear-gradient(135deg, #1a1a1a, #262626);
@@ -83,14 +82,18 @@
             max-width: 500px;
             padding: 16px;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 15px;
-            margin-bottom: 25px;
             box-sizing: border-box;
         }
+        .reward-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
         .reward-img {
-            width: 75px;
-            height: 75px;
+            width: 65px;
+            height: 65px;
             border-radius: 10px;
             object-fit: cover;
             background-color: #000;
@@ -98,27 +101,7 @@
         .reward-info {
             display: flex;
             flex-direction: column;
-            gap: 5px;
-        }
-        .badges {
-            display: flex;
-            gap: 6px;
-        }
-        .badge-new {
-            background-color: #ff0055;
-            color: white;
-            font-size: 9px;
-            font-weight: bold;
-            padding: 2px 7px;
-            border-radius: 4px;
-        }
-        .badge-premium {
-            background-color: #7b1fa2;
-            color: white;
-            font-size: 9px;
-            font-weight: bold;
-            padding: 2px 7px;
-            border-radius: 4px;
+            gap: 4px;
         }
         .reward-title {
             font-size: 16px;
@@ -130,7 +113,6 @@
             font-size: 11px;
             color: #aaa;
             margin: 0;
-            line-height: 1.4;
         }
         .stars {
             color: #ffc107;
@@ -140,15 +122,14 @@
             background-color: #00e676;
             color: #000;
             text-align: center;
-            padding: 16px;
-            border-radius: 30px;
+            padding: 15px;
+            border-radius: 25px;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
             display: block;
-            width: 96%;
-            max-width: 500px;
-            box-shadow: 0px 4px 18px rgba(0, 230, 118, 0.4);
+            width: 100%;
+            box-shadow: 0px 4px 15px rgba(0, 230, 118, 0.4);
             box-sizing: border-box;
         }
     </style>
@@ -168,19 +149,16 @@
     </div>
 
     <div class="reward-card">
-        <img src="https://raw.githubusercontent.com/dipakgamer98/FreeFireReward/main/image_search_1788236237970.jpg" class="reward-img" alt="Diamond">
-        <div class="reward-info">
-            <div class="badges">
-                <span class="badge-new">NEW</span>
-                <span class="badge-premium">PREMIUM</span>
+        <div class="reward-top">
+            <img src="https://raw.githubusercontent.com/dipakgamer98/FreeFireReward/main/image_search_1788236237970.jpg" class="reward-img" alt="Diamond">
+            <div class="reward-info">
+                <h3 class="reward-title">FREE DIAMONDS CLAIM</h3>
+                <p class="reward-desc">FREE 10000 DIAMONDS CLAIM 💎🥳</p>
+                <div class="stars">★★★★★</div>
             </div>
-            <h3 class="reward-title">FREE DIAMONDS</h3>
-            <p class="reward-desc">FREE FIRE UNLIMITED DIAMONDS • INSTANT CLAIM</p>
-            <div class="stars">★★★★★</div>
         </div>
+        <a href="https://1024terabox.com/s/1Po9NS3IRCASNtAWaJ2lUTA" class="claim-btn">CLAIM FREE DIAMOND 💎</a>
     </div>
-
-    <a href="https://1024terabox.com/s/1Po9NS3IRCASNtAWaJ2lUTA" class="claim-btn">💎 CLAIM FREE DIAMOND</a>
 
     <script>
         function playVideo() {
